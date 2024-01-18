@@ -9,7 +9,7 @@
     "48": "icons/icon-48.png"
   },
 
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "https://*.storage.googleapis.com/*" ],
 
   "browser_action": {
     "default_icon": "icons/icon-48.png",
@@ -23,7 +23,7 @@
     "type": "module"
   },
 
-  "content_security_policy": "default-src 'self' https://cdn.jsdelivr.net https://bdp-raw-prod.storage.googleapis.com https://*.data.gouv.fr; script-src 'self' 'unsafe-eval' blob: https://cdn.jsdelivr.net; manifest-src 'self'",
+  "content_security_policy": "default-src 'self' https://cdn.jsdelivr.net https://*.storage.googleapis.com; script-src 'self' 'unsafe-eval' blob: https://cdn.jsdelivr.net; object-src 'self'",
 
   "content_scripts": [
     {
